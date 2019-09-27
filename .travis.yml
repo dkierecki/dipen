@@ -1,2 +1,10 @@
 language: java
 jdk: openjdk8
+addons:
+  sonarcloud:
+    organization: "dkierecki"
+    token:
+      secure: "r/aTwfrT4JWnpOY47ylxwZaO0i4KmF8ZQRk7iVHVwmYYP39wiDaeg9BfsvrFHWyeRnnq3TnHc6InwOF+vZx6Km483uXIoZePROtNv7JbjdBczqTSaO8Zomfu3EXncqRi05yigAd9zhrsWOlZE0lEmM/TWCf2fHH7FnM7eUgfhS3ZC7UO989X0cGwkiXHiIR/+KnVyId5K76GFMcILhfJBwXWftmaPlon62/vsv0sppKZu/wTGhxycxEtbDLkPXiFZ17vMRc35vCUcbtI1JFfLTVNI6Ssuim7pDBksef6KDzyLf0NnYw/hLyV4T1Kcx7clOOEulaJC9rQ34My5WD0nq0wvTsrDp8J9rWEQacq2JPrho0N0NVkPnAceeB9bM7vcU9haNjvA5IIIsb0+pVRgpPgj+bKj5uvlGRRTtuMjG+TFN5IylZCUD5u96LZmCQp5JAcWZgW2pS/ERgX4cKHXMY3GnkAwPnK/Wl/R54BG8hC4VgbB6mxsu3hbChYV3sm16TikD50rO83D+qaRCfaS/Kzhig+ZEV1ymKyedd1okMFUzli4RucxeXYRa+HXX8vgkCy2jAVezf51GhnijO96SK9Yt9ZYK/EzIQA/qvpdfp9D6g/jmWTR4OQeHqJm0qTH5yD3pjcf2PY8D772Z5/EqehNbtypq4ITEyfP2LgU94="
+
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
