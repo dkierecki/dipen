@@ -31,7 +31,7 @@ class ExpenseTest {
     }
 
     @Test
-    private void createExpenseWithProvidedDate() {
+    void createExpenseWithProvidedDate() {
         Expense expense = new Expense(SOME_VALUE, PAST_DATE);
         assertThat(expense.getDate()).isEqualTo(PAST_DATE);
     }
