@@ -48,4 +48,10 @@ class ExpenseTest {
         expense.setNote(SOME_TEXT);
         assertThat(expense.getNote()).contains(SOME_TEXT);
     }
+
+    @Test
+    void generateExpenseId() {
+        Expense expense = new Expense(SOME_VALUE);
+        assertThat(expense.getId()).isEqualTo(0L);
+    }
 }

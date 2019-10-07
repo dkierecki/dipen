@@ -29,6 +29,10 @@ class Expense {
         this.date = date;
     }
 
+    Long getId() {
+        return id;
+    }
+
     BigDecimal getValue() {
         return value;
     }
